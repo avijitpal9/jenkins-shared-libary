@@ -1,13 +1,13 @@
 @Library('mylibrary') _
 pipeline{
-    agent{
-       any
-    }
+    agent any
     stages{
         stage("A"){
             steps{
-                echo "========executing stage A========"
-                sayHello
+                script {
+                    echo "========executing stage A========"
+                    sayHello()
+                }
             }
 
         }

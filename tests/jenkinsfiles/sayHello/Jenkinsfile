@@ -1,0 +1,4 @@
+#!groovy
+stage('say-hello') {
+    sayHello()
+}

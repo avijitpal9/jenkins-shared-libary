@@ -1,0 +1,13 @@
+def execute() {
+    node() {
+            stage('build') {
+                sh "mvn clean package -DskipTests"
+            }
+
+            stage('test') {
+                sh "mvn verify"
+            }
+    }
+}
+
+return this

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sayHelloTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-16T19:19:06" hostname="avijit-pal.local" time="1.472">
+  <properties/>
+  <testcase name="printHello()" classname="sayHelloTest" time="1.472"/>
+  <system-out><![CDATA[   sample.execute()
+      sample.node(groovy.lang.Closure)
+         sample.stage(build, groovy.lang.Closure)
+            sample.sh(mvn clean package -DskipTests)
+         sample.stage(test, groovy.lang.Closure)
+            sample.sh(mvn verify)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

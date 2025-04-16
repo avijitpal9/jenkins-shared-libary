@@ -1,4 +1,17 @@
-#!groovy
-stage('say-hello') {
-    sayHello()
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Maven Build'
+                sh 'mvn clean package'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Mavnen Test'
+                sh 'mvn test'
+            }
+        }
+    }
 }

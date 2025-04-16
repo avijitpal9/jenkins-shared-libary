@@ -1,7 +1,7 @@
 import com.lesfurets.jenkins.unit.BasePipelineTest
 import org.junit.jupiter.api.*
 
-public class sayHelloTest extends BasePipelineTest {
+public class sampleTest extends BasePipelineTest {
     @Override
     @BeforeEach
     void setUp() {
@@ -9,7 +9,7 @@ public class sayHelloTest extends BasePipelineTest {
     }
 
     @Test
-    void printHello() {
+    void validateSample() {
         loadScript('tests/jenkinsfiles/sayHello/sample.jenkins').execute()
         printCallStack()
         assertJobStatusSuccess()

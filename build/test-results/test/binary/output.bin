@@ -1,6 +1,0 @@
-   sample.execute()
-'      sample.node(groovy.lang.Closure)
-2         sample.stage(build, groovy.lang.Closure)
-5            sample.sh(mvn clean package -DskipTests)
-1         sample.stage(test, groovy.lang.Closure)
-"            sample.sh(mvn verify)

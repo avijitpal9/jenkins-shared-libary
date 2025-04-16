@@ -1,5 +1,6 @@
-@Library('my-shared-library') _
+@Library('mylibrary') _
 
+def greet = new org.tesco.GreetingsV2(this)
 pipeline{
     agent any
     stages{
@@ -7,7 +8,7 @@ pipeline{
             steps{
                 script {
                     echo "========executing stage A========"
-                    sayHello('Avijit')
+                    greet.greet('Good Evening')
                 }
             }
 

@@ -1,5 +1,5 @@
-package org.tesco
-import org.tesco.Quotes
+package org.avijit
+import org.avijit.Quotes
 
 class GreetingsV2 {
     def steps

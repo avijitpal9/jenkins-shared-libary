@@ -1,0 +1,16 @@
+@Library('my-shared-library@feature1') _
+
+pipeline{
+    agent any
+    stages{
+        stage("A"){
+            steps{
+                script {
+                    echo "========executing stage A========"
+                    wrapperQuotes()  
+                }
+            }
+
+        }
+    }
+}

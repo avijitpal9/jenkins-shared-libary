@@ -10,7 +10,7 @@ public class scriptedTest extends BasePipelineTest {
 
     @Test
     void validateScriptedPipeline() {
-        loadScript('src/test/groovy/jenkinsfiles/scriptedPipeline1.jenkins').execute()
+        loadScript('test/jenkinsfiles/scriptedPipeline1.jenkins').execute()
         printCallStack()
         assertJobStatusSuccess()
     }

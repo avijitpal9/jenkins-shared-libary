@@ -3,7 +3,9 @@
 @Library('my-shared-library@feature1')
 import org.avijit.GreetingsV2
 
-def greet = new GreetingsV2(this)
+// here this object passes the steps object to the class
+// here env object passes the env object to the class
+def greet = new GreetingsV2(this, env)
 
 pipeline{
     agent any

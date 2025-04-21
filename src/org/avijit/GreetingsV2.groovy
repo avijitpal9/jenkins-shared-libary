@@ -1,7 +1,7 @@
 package org.avijit
 import org.avijit.Quotes
 
-class GreetingsV2 {
+class GreetingsV2 implements Serializable {
     def steps
 
     GreetingsV2(steps) {
@@ -11,7 +11,7 @@ class GreetingsV2 {
     def greet(String msg) {
         def quote =  new Quotes()
         steps.echo "GreetingV2: ${msg}"
-        steps.echo quote.generate()
+        steps.echo "Quotes:" + quote.generate()
     }
 
 }

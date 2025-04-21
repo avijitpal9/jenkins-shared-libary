@@ -1,6 +1,10 @@
 @Library('my-shared-library@feature1') _
 
-def greet = new org.avijit.GreetingsV2(this)
+@Library('my-shared-library@feature1')
+import org.avijit.GreetingsV2
+
+
+def greet = new GreetingsV2(this)
 pipeline{
     agent any
     stages{

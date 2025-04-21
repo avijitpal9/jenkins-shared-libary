@@ -1,4 +1,4 @@
-@Library('my-shared-library@feature1') _
+// @Library('my-shared-library@feature1') _
 
 @Library('my-shared-library@feature1')
 import org.avijit.GreetingsV2

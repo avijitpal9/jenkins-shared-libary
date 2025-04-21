@@ -1,6 +1,6 @@
-@Library('mylibrary') _
+@Library('my-shared-library@feature1') _
 
-def greet = new org.tesco.GreetingsV2(this)
+def greet = new org.avijit.GreetingsV2(this)
 pipeline{
     agent any
     stages{

@@ -11,12 +11,18 @@ repositories {
 
 sourceSets {
     main {
-        groovy { srcDirs = ['src', 'vars'] }
-        resources { srcDirs = ['resources'] }
+        groovy { 
+            srcDirs = ['src/main/groovy', 'vars'] 
+        }
+        resources { 
+            srcDirs = ['resources'] 
+        }
     }
 
     test {
-        groovy { srcDirs = ['tests'] }
+        groovy { 
+            srcDirs = ['src/test/groovy'] 
+        }
     }
 }
 
@@ -29,7 +35,8 @@ dependencies {
     testImplementation(group: 'org.assertj', name: 'assertj-core', version: '3.13.2')
 }
 
-tasks.named('test') {
+test {
+    dependsOn cleanTest
     useJUnitPlatform() 
     testLogging {
         events("passed", "skipped", "failed")

@@ -9,8 +9,8 @@ public class decalrativeTest extends DeclarativePipelineTest {
     }
 
     @Test
-    void validateDeclarative() {
-        runScript('tests/jenkinsfiles/sayHello/Jenkinsfile')
+    void validateDeclarativePipeline() {
+        runScript('src/test/groovy/jenkinsfiles/declarativePipeline1.jenkins')
         printCallStack()
         assertJobStatusSuccess()
     }

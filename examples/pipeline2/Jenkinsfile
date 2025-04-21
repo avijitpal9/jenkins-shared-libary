@@ -3,6 +3,8 @@
 @Library('my-shared-library@feature1')
 import org.avijit.GreetingsV2
 
+def greet = new GreetingsV2(this)
+
 pipeline{
     agent any
     stages{
@@ -10,7 +12,6 @@ pipeline{
             steps{
                 script {
                     echo "========executing stage A========"
-                    def greet = new GreetingsV2(this)
                     greet.greet('Good Evening')
                 }
             }

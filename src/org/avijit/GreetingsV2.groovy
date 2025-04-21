@@ -13,7 +13,7 @@ class GreetingsV2 implements Serializable {
         def quote =  new Quotes()
         steps.echo "GreetingV2: ${msg}"
         steps.echo "Quotes: " + quote.generate()
-        steps.echo "ENV Vars: " + env
+        steps.echo "ENV Vars: " + env.getEnvironment() // Need to approve script
     }
 
 }

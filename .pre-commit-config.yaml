@@ -4,6 +4,6 @@ repos:
     - id: trufflehog
       name: TruffleHog
       description: Detect secrets in your data.
-      entry: trufflehog git file://. --since-commit HEAD --results=verified,unknown --fail
+      entry: /bin/bash -c "trufflehog git file://. --since-commit HEAD --results=verified,unknown --fail"
       language: system
-      stages: ["commit", "push"]
+      stages: ["pre-commit", "pre-push"]
